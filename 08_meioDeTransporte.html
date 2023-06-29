@@ -1,17 +1,29 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    //Problema: Meio de transporte mais barato
-    // Faça um script que peça para o usuário informar o preço do litro do combustível e a quantidade de litros utilizados para se deslocar para o trabalho diariamente.
-    // Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
-    // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
+  //Problema: Meio de transporte mais barato
+  // Faça um script que peça para o usuário informar o preço do litro do combustível e a quantidade de litros utilizados para se deslocar para o trabalho diariamente.
+  // Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
+  // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
-    //Entrada
+  //Entrada
+  const preco_combustivel = parseFloat(
+    prompt("Informe o preço do litro do combustível: ")
+  );
+  const litros_utilizados = parseFloat(
+    prompt(
+      "Informe a quantidade de litros utilizados para o deslocamento diário: "
+    )
+  );
+  const preco_transporte_publico = parseFloat(
+    prompt("Informe o preço do transporte público diário: ")
+  );
+  const custoCarro = 2 * preco_combustivel * litros_utilizados;
+  const custoTransportePublico = 2 * preco_transporte_publico;
+  let mensagem = "";
 
+  //Processamento
+  mensagem = custoCarro < custoTransportePublico ? "é mais barato ir de carro": " é mais barato ir de transporte público ";
+const custoMaisBarato = custoCarro > custoTransportePublico ? custoCarro : custoTransportePublico;
 
-    //Processamento
-
-    
-    //Saída
-
-    
+  alert(mensagem);
 </script>

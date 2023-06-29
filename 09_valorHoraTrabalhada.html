@@ -1,18 +1,29 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    //Problema: Calcular valor da hora trabalhada
-    // Faça um script que peça para o usuário informar a quantidade de horas trabalhadas semanalmente e quanto que recebe por hora trabalhada.
-    // Se o total de horas trabalhadas for até 45 horas (inclusive), não haverá adicional.
-    // Se o total de horas trabalhadas for até 60 horas (inclusive), haverá adicional de 20%.
-    // Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
-    // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
+  //Problema: Calcular valor da hora trabalhada
+  // Faça um script que peça para o usuário informar a quantidade de horas trabalhadas semanalmente e quanto que recebe por hora trabalhada.
+  // Se o total de horas trabalhadas for até 45 horas (inclusive), não haverá adicional.
+  // Se o total de horas trabalhadas for até 60 horas (inclusive), haverá adicional de 20%.
+  // Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
+  // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
-    //Entrada
+  //Entrada
+const hora = parseFloat(prompt(`Quantas horas você trabalha semanalmente?`).replace(".","."));
+  const horapaga = parseFloat(prompt(`Quanto ganha a hora?`));
+  let mensagem = "";
+  //Processamento
+  mensagem =
+    hora <= 45
+      ? `O adicional a mais por hora é de ${horapaga} e a quantidade de horas trabalhadas é ${hora}.`
+      : hora <= 60
+      ? `O adicional a mais será de ${
+          horapaga * 0.2 .toFixed(2)
+        } e a quantidade de horas trabalhadas é ${hora}. e o adicional é de  ${hora* horapaga}`
+      : `O adicional a mais é de ${
+          horapaga * 0.3 .toFixed(2)
+          
+        } e a quantidade de horas trabalhadas é ${hora}. e o adicional é de ${hora * horapaga}`;
 
-
-    //Processamento
-
-    
-    //Saída
-
+  //Saída
+  alert(mensagem);
 </script>
